@@ -8,6 +8,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 // Swing UI for Hangman
+// Learning to use Swing
 public class Hangman_Gui {
     private static JFrame frame;
     private static JPanel panel;
