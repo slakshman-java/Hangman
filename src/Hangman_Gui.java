@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+// Swing UI for Hangman
 public class Hangman_Gui {
     private static JFrame frame;
     private static JPanel panel;
