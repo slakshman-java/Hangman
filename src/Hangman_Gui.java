@@ -42,6 +42,19 @@ public class Hangman_Gui {
             hangmanChecker(guessedLetter);
         }
     }
+
+    private static class NewWordClickListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            initializeGUI();
+        }
+    }
+    private static void initializeGUI () {
+        Hangman.initialize();
+        asteriskText.setForeground(Color.BLACK);
+        asteriskText.setText(Hangman.asterisk);
+        guessLetter.setText("");
+    }
+
     private static void hangmanChecker (String guessedLetter) {
 
         if (guessedLetter.length() != 1) {
@@ -96,9 +109,10 @@ public class Hangman_Gui {
         frame.getContentPane().add(BorderLayout.CENTER, hangMan);
         frame.setVisible(true);
 
-        Hangman.initialize();
+        initializeGUI();
 
         oK.addActionListener(new ButtonClickListener());
+        newWord.addActionListener(new NewWordClickListener());
         guessLetter.addKeyListener(new LetterGuessedListener());
     }
 }
